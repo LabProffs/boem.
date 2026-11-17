@@ -1,1 +1,134 @@
 
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystery Box</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 1. STARTSCHERM -->
+    <section id="startscherm">
+        <h1>MYSTERY BOX</h1>
+        <h2>Dossier 001: Het verdwenen prototype</h2>
+
+        <p>Er is iets mysterieus gebeurd in het laboratorium.
+        Kun jij ontdekken wat er is gebeurd?</p>
+
+        <button onclick="startSpel()">Open het dossier</button>
+    </section>
+
+
+    <!-- 2. VERHAAL -->
+    <section id="verhaal" style="display: none;">
+        <h2>Het verhaal</h2>
+
+        <p>Het is 20:45 uur. Morgen vindt de grote
+        uitvinderswedstrijd plaats, maar het winnende
+        prototype is verdwenen uit het laboratorium.</p>
+
+        <p>De beveiligingscamera is uitgevallen en er ligt
+        een vreemd briefje op tafel.</p>
+
+        <p>Jij moet ontdekken wat er is gebeurd!</p>
+
+        <button onclick="openSpelkamer()">Ga naar het laboratorium</button>
+    </section>
+
+
+    <!-- 3. SPELKAMER -->
+    <section id="spelkamer" style="display: none;">
+        <h2>Het laboratorium</h2>
+
+        <p>Onderzoek de voorwerpen om aanwijzingen te vinden.</p>
+
+        <button onclick="openPuzzel('laptop')">💻 Laptop</button>
+
+        <button onclick="openPuzzel('briefje')">📄 Briefje</button>
+
+        <button onclick="openPuzzel('kluis')">🔒 Kluis</button>
+    </section>
+
+
+    <!-- 4. PUZZELS -->
+
+    <!-- Puzzel 1: Laptop -->
+    <section id="laptop" style="display: none;">
+        <h2>De beveiligingsbeelden</h2>
+
+        <p>Voer de viercijferige toegangscode in.</p>
+
+        <input type="text" id="codeLaptop" placeholder="Voer code in">
+
+        <button onclick="controleerLaptop()">Controleer</button>
+
+        <p id="resultaatLaptop"></p>
+
+        <button onclick="terugNaarKamer()">Terug</button>
+    </section>
+
+
+    <!-- Puzzel 2: Briefje -->
+    <section id="briefje" style="display: none;">
+        <h2>Het geheime briefje</h2>
+
+        <p>NDVW</p>
+
+        <p>Iedere letter is drie plaatsen vooruitgeschoven.
+        Welk woord ontstaat als je drie plaatsen teruggaat?</p>
+
+        <input type="text" id="codeBriefje" placeholder="Voer woord in">
+
+        <button onclick="controleerBriefje()">Controleer</button>
+
+        <p id="resultaatBriefje"></p>
+
+        <button onclick="terugNaarKamer()">Terug</button>
+    </section>
+
+
+    <!-- Puzzel 3: Kluis -->
+    <section id="kluis" style="display: none;">
+        <h2>De laatste kluis</h2>
+
+        <p>De code bestaat uit de cijfers 2, 5 en 8.</p>
+
+        <p>De 8 staat direct links van de 2.
+        De 5 staat niet op de laatste positie.</p>
+
+        <input type="text" id="codeKluis" placeholder="Voer code in">
+
+        <button onclick="controleerKluis()">Controleer</button>
+
+        <p id="resultaatKluis"></p>
+
+        <button onclick="terugNaarKamer()">Terug</button>
+    </section>
+
+
+    <!-- 5. EINDSCHERM -->
+    <section id="eindscherm" style="display: none;">
+        <h1>Mysterie opgelost!</h1>
+
+        <p>Je hebt het verdwenen prototype teruggevonden.</p>
+
+        <p>Het prototype was veilig opgeborgen door de beheerder
+        vanwege een lekkage in het laboratorium.</p>
+
+        <h2>Goed gedaan, detective!</h2>
+
+        <button onclick="opnieuwSpelen()">Opnieuw spelen</button>
+    </section>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="app.js"></script>
+
+</body>
+</html>
+
