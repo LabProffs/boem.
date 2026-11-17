@@ -1,1 +1,71 @@
+body {
+    margin: 0;
+    background-color: #101827;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #192438;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.hero {
+    padding: 100px 20px;
+    background-color: #192438;
+}
+
+.hero h1 {
+    font-size: 40px;
+    color: #e6b95c;
+}
+
+.dossier {
+    color: #e6b95c;
+    letter-spacing: 4px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #b88b43;
+    color: #101827;
+    padding: 15px 25px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+section {
+    padding: 50px 20px;
+}
+
+.stappen {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.stappen div {
+    background-color: #192438;
+    padding: 25px;
+    border-radius: 10px;
+    width: 200px;
+}
+
+footer {
+    background-color: #192438;
+    padding: 40px;
+}
 
