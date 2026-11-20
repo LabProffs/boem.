@@ -1,71 +1,216 @@
-body {
+/* Algemene instellingen */
+* {
     margin: 0;
-    background-color: #101827;
-    color: white;
-    font-family: Arial, sans-serif;
-    text-align: center;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #10141d;
+    color: #f5f5f5;
+    line-height: 1.7;
+}
+
+/* Navigatie */
 header {
+    background-color: #090d14;
+    padding: 20px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
-    background-color: #192438;
+    border-bottom: 1px solid #b99550;
+}
+
+header h2 {
+    color: #d6b56d;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 10px;
+    font-size: 15px;
+    transition: color 0.3s;
 }
 
+nav a:hover {
+    color: #d6b56d;
+}
+
+/* Hoofdpagina */
 .hero {
-    padding: 100px 20px;
-    background-color: #192438;
-}
-
-.hero h1 {
-    font-size: 40px;
-    color: #e6b95c;
+    min-height: 500px;
+    padding: 120px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        rgba(8, 12, 20, 0.85),
+        rgba(8, 12, 20, 0.95)
+    );
 }
 
 .dossier {
-    color: #e6b95c;
-    letter-spacing: 4px;
+    color: #d6b56d;
+    letter-spacing: 5px;
+    font-size: 14px;
+    margin-bottom: 20px;
 }
 
+.hero h1 {
+    font-size: 42px;
+    color: #d6b56d;
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 600px;
+    margin-bottom: 25px;
+}
+
+/* Knoppen */
 .button {
     display: inline-block;
-    background-color: #b88b43;
-    color: #101827;
-    padding: 15px 25px;
-    margin-top: 20px;
+    background-color: #c5a15d;
+    color: #10141d;
+    padding: 14px 30px;
     text-decoration: none;
-    border-radius: 5px;
     font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
+.button:hover {
+    background-color: #e2c98f;
+    transform: translateY(-3px);
+}
+
+/* Algemene secties */
 section {
-    padding: 50px 20px;
+    padding: 75px 10%;
+    text-align: center;
 }
 
+section h2 {
+    color: #d6b56d;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+section p {
+    max-width: 750px;
+    margin: 0 auto 15px;
+    color: #d1d1d1;
+}
+
+/* Stappen */
 .stappen {
     display: flex;
     justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 35px;
 }
 
 .stappen div {
-    background-color: #192438;
-    padding: 25px;
+    background-color: #1c2533;
+    border: 1px solid #80683e;
+    padding: 30px 20px;
     border-radius: 10px;
-    width: 200px;
+    flex: 1;
+    max-width: 300px;
+    transition: transform 0.3s;
 }
 
+.stappen div:hover {
+    transform: translateY(-6px);
+}
+
+.stappen h3 {
+    color: #d6b56d;
+    margin-bottom: 12px;
+}
+
+/* Voor wie en bestellen */
+#voor-wie,
+#bestellen {
+    background-color: #151d29;
+}
+
+#voor-wie h3 {
+    color: #d6b56d;
+    margin: 25px 0 10px;
+}
+
+#bestellen {
+    border-top: 1px solid #80683e;
+    border-bottom: 1px solid #80683e;
+}
+
+/* Over ons */
+#over-ons {
+    background-color: #10141d;
+}
+
+/* Footer */
 footer {
-    background-color: #192438;
-    padding: 40px;
+    background-color: #090d14;
+    text-align: center;
+    padding: 45px 20px;
+    border-top: 1px solid #b99550;
+}
+
+footer h2 {
+    color: #d6b56d;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #bdbdbd;
+    margin-bottom: 10px;
+}
+
+/* Mobiele telefoons */
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .stappen {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stappen div {
+        width: 100%;
+    }
+
+    section {
+        padding: 55px 7%;
+    }
 }
 
